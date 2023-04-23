@@ -1,0 +1,43 @@
+//pulling in $grid-breakpoints object from index.scss
+@use "sass:map";
+@import '../../index.scss';
+
+.peach {
+    color: var(--portrait-peach);
+}
+
+.bright-orange {
+    color: var(--logo-bright-orange);
+}
+
+.dark-orange {
+    color: var(--logo-dark-orange);
+}
+
+.dark-tan {
+    color: var(--site-nav-dark);
+}
+
+.very-dark-tan {
+    color: var(--site-nav-very-dark);
+}
+
+.transparent-bg {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+@mixin stroke($color: rgba(255, 255, 255, 0.5), $size: 1px) {
+    text-shadow:
+      -#{$size} -#{$size} 0 $color,
+       0        -#{$size} 0 $color,
+       #{$size} -#{$size} 0 $color,
+       #{$size}  0        0 $color,
+       #{$size}  #{$size} 0 $color,
+       0         #{$size} 0 $color,
+      -#{$size}  #{$size} 0 $color,
+      -#{$size}  0        0 $color;
+  }
+
+  .text-stroke {
+    @include stroke(rgba(255, 255, 255, 0.5), 1px)
+}

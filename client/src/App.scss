@@ -1,0 +1,64 @@
+//pulling in $grid-breakpoints object from index.scss
+@use "sass:map";
+@import './index.scss';
+
+:root{
+    --white: #ffffff;
+    --black: #000000;
+    --portrait-peach: #fbf2d6;
+    --complementary-violet: #717CAD;
+    --site-nav-light: #C8EBFA;
+    --site-nav-dark: #7A7668;
+    --site-nav-very-dark: #3B3832;
+    --tan-shade: #C7BDA9;
+    --logo-bright-orange: #fbd528;
+    --logo-dark-orange: #f07c32;
+  }
+
+.dark-section {
+  background-color: var(--tan-shade);
+}
+
+.section-title {
+    font-size: 7.5em;
+    line-height: .75em;
+}
+
+.section-title-sm {
+  font-size: 6em;
+  line-height: .75em;
+}
+
+@media only screen and (min-width: map.get($grid-breakpoints, "lg")) {
+  .section-title {
+      font-size: 10em;
+  }
+
+  .section-title-sm {
+    font-size: 7em;
+  }
+
+  .position-absolute-lg {
+      position: absolute;
+  }
+
+  .right-lg {
+    right: 0;
+  }
+}
+
+@media only screen and (min-width: map.get($grid-breakpoints, "xl")) {
+  .section-title {
+      font-size: 15em;
+  }
+
+  .section-title-sm {
+    font-size: 10em;
+  }
+}
+
+@media only screen and (min-width: map.get($grid-breakpoints, "xxl")) {
+  .section-title-sm {
+    font-size: 12em;
+  }
+}

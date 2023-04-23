@@ -1,0 +1,117 @@
+//pulling in $grid-breakpoints object from index.scss
+@use "sass:map";
+@import '../../../index.scss';
+
+#landingWrapper{
+    width: 100%;
+    background: linear-gradient(
+      to right,
+      var(--portrait-peach) 0%,
+      var(--portrait-peach) 50%,
+      var(--white) 50%,
+      var(--white) 100%
+    );
+  }
+
+.duality-wrapper {
+    text-align: center; 
+    text-align: -webkit-center;
+}
+
+.font-style-courier {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+a .duality-description {
+    color: var(--site-nav-dark);
+}
+
+a .duality-description:hover {
+    color: var(--site-nav-very-dark);
+}
+
+.smallScreens {
+    width:100%;
+}
+
+@media only screen and (min-width: map.get($grid-breakpoints, "xl")) {
+    .duality {
+        width: 1040px;
+        height: 600px;
+        position: relative;
+        /* duality images */
+        /* Background images */
+        /* Hide default image with no effects */
+    }
+
+    .duality .developer,
+    .duality .designer {
+        width: 520px;
+        height: 600px;
+        top: 0px;
+        position: absolute;
+    }
+
+    .duality .developer .duality-description,
+    .duality .designer .duality-description {
+        position: absolute;
+        top: 180px;
+        width: 290px;
+    }
+
+    .duality .developer {
+        text-align: left;
+        right: 0px;
+    }
+
+    .duality .developer .duality-description {
+        right: 0px;
+    }
+
+    .duality .designer {
+        left: 0px;
+    }
+
+    .duality .designer .duality-description {
+        left: 0px;
+    }
+
+    .duality .designer-img,
+    .duality .developer-img {
+        width: 420px;
+        height: 600px;
+        position: absolute;
+        top: 0;
+        display: block;
+        z-index: 1;
+    }
+
+    .duality .designer-img {
+        background: url('../../../assets/img/portraitDesigner.png') 0 0 no-repeat;
+        background-position: 60px 0px;
+        left: 100px;
+    }
+
+    .duality .developer-img {
+        background: url('../../../assets/img/portraitDeveloper.png') 0 0 no-repeat;
+        background-position: calc(100% - 60px) 0px;
+        right: 100px;
+    }
+
+    .duality .duality-img {
+        display: none;
+    }
+
+    // Drip Up
+    #landingWrapper::after {
+        content: url('../../../assets/img/dripUp.png');
+        position: absolute;
+        right: 0;
+        margin-top:-109px;
+        z-index: 100;
+    }
+}
+
+#designer-img, #developer-img, #designer-desc, #developer-desc, #duality, #section {
+    transition: 500ms linear;
+}

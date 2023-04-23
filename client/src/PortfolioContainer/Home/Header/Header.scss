@@ -1,0 +1,40 @@
+//pulling in $grid-breakpoints object from index.scss
+@use "sass:map";
+@import '../../../index.scss';
+
+.navbar-dark-custom {
+    width: 100%;
+    background-color: var(--site-nav-very-dark);
+  }
+
+.text-white-75 {
+    --bs-text-opacity: 1;
+    color: rgba(255, 255, 255, 0.75) !important;
+}
+
+@media only screen and (min-width: map.get($grid-breakpoints, "lg")) {
+    #site-nav .navbar-nav {
+        width: 100%;
+      }
+    .site-nav-link-lg {
+        line-height: 0;
+        place-self: center;
+    }
+    .grow-nav-link {
+        flex-basis: 200px;
+        flex-grow: 1;
+        justify-content: center;
+      }
+}
+
+@media only screen and (min-width: map.get($grid-breakpoints, "xl")) {
+    #site-nav .navbar-nav {
+        width: 75%;
+      }
+}
+
+@media only screen and (min-width: map.get($grid-breakpoints, "xxl")) {
+    #site-nav .navbar-nav {
+        width: 65%;
+      }
+}
