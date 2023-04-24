@@ -12,6 +12,11 @@
     color: rgba(255, 255, 255, 0.75) !important;
 }
 
+#site-nav a.nav-link.active {
+  --bs-text-opacity: 1;
+  color: var(--logo-dark-orange) !important;
+}
+
 @media only screen and (min-width: map.get($grid-breakpoints, "lg")) {
     #site-nav .navbar-nav {
         width: 100%;

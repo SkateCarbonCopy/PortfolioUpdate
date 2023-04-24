@@ -4,9 +4,11 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import 'lightbox2/dist/css/lightbox.min.css';
 import './index.scss';
 
 import 'bootstrap/dist/js/bootstrap';
+import 'lightbox2/dist/js/lightbox-plus-jquery.js';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

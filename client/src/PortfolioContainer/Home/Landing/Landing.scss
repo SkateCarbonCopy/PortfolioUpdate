@@ -103,13 +103,13 @@ a .duality-description:hover {
     }
 
     // Drip Up
-    #landingWrapper::after {
-        content: url('../../../assets/img/dripUp.png');
-        position: absolute;
-        right: 0;
-        margin-top:-109px;
-        z-index: 100;
-    }
+    // #landingWrapper::after {
+    //     content: url('../../../assets/img/dripUp.png');
+    //     position: absolute;
+    //     right: 0;
+    //     margin-top:-109px;
+    //     z-index: 100;
+    // }
 }
 
 #designer-img, #developer-img, #designer-desc, #developer-desc, #duality, #section {

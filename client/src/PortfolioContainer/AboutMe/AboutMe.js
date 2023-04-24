@@ -21,7 +21,7 @@ export default function AboutMe() {
                                 'a front end developer', 3000, 
                                 'a graphic designer', 3000, 
                                 'an adventure seeker', 3000, 
-                                'a perpetual learner', 3000 ]}
+                                'a lifelong learner', 3000 ]}
                                             wrapper="span"
                                             cursor={true}
                                             repeat={Infinity}

@@ -242,7 +242,7 @@ const Resume = (props) => {
   }, [fadeInSubscription]);
 
   return (
-    <div className="my-5">
+    <div className="my-5" id="Resume">
       <div className="container py-lg-5 position-relative">
         <div className='text-black-50 fw-bold section-title'>
           <span className='position-absolute-lg right-lg'>RESUME</span>
