@@ -216,7 +216,7 @@ const Resume = (props) => {
       />
       <ResumeHeading
         heading="Swimming"
-        description="In my teen years I was a lifegaurd briefly, but my love for the water has remained."
+        description="In my teen years I was a lifeguard briefly, but my love for the water has remained."
       />
       <ResumeHeading
         heading="Learning"
