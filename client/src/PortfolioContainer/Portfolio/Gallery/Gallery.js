@@ -14,14 +14,6 @@ export default function Gallery() {
 
     const images = [
         {
-            file: 'dashboard',
-            title: 'Admin Portal Dashboard',
-            description: 'This design was created to replace the existing product home page which functioned as site navigation. That navigation was moved to the site navbar.',
-            media: 'HTML/CSS/JavaScript',
-            src: 'dashboard.png',
-            alt: 'Acuo Admin Portal 2.0 dashboard, containing various system metrics and charts.'
-        },
-        {
             file: 'callme',
             title: 'Call Me!',
             description: 'This was created for a friend. I find a great deal of inspiration from street art, and stencils.',
@@ -192,14 +184,14 @@ export default function Gallery() {
     ];
 
     return (
-        <div className="my-5 container">
+        <div className="my-5">
             <div className="pt-lg-5 position-relative" style={{zIndex: -100}}>
                 <div className='text-black-50 fw-bold section-title section-title-sm'>
                     <span>GALLERY</span>
                 </div>
             </div>
             <div style={{zIndex: 100}}>
-                <ResponsiveMasonry columnsCountBreakPoints={{350: 1, 750: 2, 1200: 3}} className='gallery-bkgd'>
+                <ResponsiveMasonry columnsCountBreakPoints={{350: 1, 750: 3, 1200: 5}} className='gallery-bkgd'>
                     <Masonry gutter={"1.5rem"}>
                         {images.map((image, i) => (
                             <a 

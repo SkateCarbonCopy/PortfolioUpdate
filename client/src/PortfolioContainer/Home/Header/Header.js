@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link, animateScroll } from 'react-scroll';
 import Scrollspy from 'react-scrollspy'
 import './Header.scss';
 import logo from '../../../assets/img/logo.png';
-import Portfolio from '../../Portfolio/Portfolio';
 
 export default function Header() {
 

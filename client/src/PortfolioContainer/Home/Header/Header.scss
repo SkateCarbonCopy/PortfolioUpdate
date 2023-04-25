@@ -17,6 +17,11 @@
   color: var(--logo-dark-orange) !important;
 }
 
+#site-nav a.nav-link:hover {
+  color: var(--logo-bright-orange) !important;
+  cursor: pointer;
+}
+
 @media only screen and (min-width: map.get($grid-breakpoints, "lg")) {
     #site-nav .navbar-nav {
         width: 100%;

@@ -1,6 +1,4 @@
-import React, { useState, useEffect } from "react";
-import ScrollService from "../../utilities/ScrollService";
-import Animations from "../../utilities/Animations";
+import React, { useState } from "react";
 import "./Resume.scss";
 
 const Resume = (props) => {
@@ -8,31 +6,24 @@ const Resume = (props) => {
   const [selectedBulletIndex, setSelectedBulletIndex] = useState(0);
   const [carousalOffsetStyle, setCarousalOffsetStyle] = useState({});
 
-  let fadeInScreenHandler = (screen) => {
-    if (screen.fadeInScreen !== props.id) return;
-
-    Animations.animations.fadeInScreen(props.id);
-  };
-  const fadeInSubscription =
-    ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
-
   /* REUSABLE MINOR COMPONENTS */
   const ResumeHeading = (props) => {
     return (
       <div className="resume-heading">
-        <div className="resume-main-heading">
-          <div className="heading-bullet"></div>
-          <h5>{props.heading ? props.heading : ""}</h5>
-          {props.fromDate && props.toDate ? (
+        <div className="resume-main-heading align-items-start">
+          <div className={props.heading ? "heading-bullet" : ""}></div>
+          <h4 className="fw-bold">{props.heading ? props.heading : ""}</h4>
+          {props.dates && props.heading ? (
             <div className="heading-date">
-              {props.fromDate + "-" + props.toDate}
+              {props.dates}
             </div>
           ) : (
             <div></div>
           )}
         </div>
         <div className="resume-sub-heading">
-          <h6>{props.subHeading ? props.subHeading : ""}</h6>
+          <h5 className="d-inline">{props.subHeading ? props.subHeading : ""}</h5> 
+          <span class="ms-3 badge bg-light text-dark">{props.subHeadingDates ? props.subHeadingDates : ""}</span>
         </div>
         <div className="resume-heading-description">
           <h6>{props.description ? props.description : ""}</h6>
@@ -52,63 +43,54 @@ const Resume = (props) => {
 
   //here we have
   const programmingSkillsDetails = [
-    { skill: "JavaScript", ratingPercentage: 85 },
-    { skill: "React JS", ratingPercentage: 85 },
-    { skill: "React Native", ratingPercentage: 85 },
-    { skill: "Express JS", ratingPercentage: 89 },
-    { skill: "Node JS", ratingPercentage: 89 },
-    { skill: "Mongo Db", ratingPercentage: 70 },
-    { skill: "Core Java", ratingPercentage: 80 },
-    { skill: "HTML", ratingPercentage: 80 },
-    { skill: "CSS", ratingPercentage: 80 },
+    { skill: "JavaScript", ratingPercentage: 90 },
+    { skill: "TypeScript", ratingPercentage: 80 },
+    { skill: "React", ratingPercentage: 75 },
+    { skill: "AngularJS", ratingPercentage: 95 },
+    { skill: "HTML", ratingPercentage: 100 },
+    { skill: "CSS", ratingPercentage: 100 },
+    { skill: "Bootstrap", ratingPercentage: 100 },
+    { skill: "SASS", ratingPercentage: 90 },
+    { skill: "Photoshop", ratingPercentage: 90 },
+    { skill: "Illustrator", ratingPercentage: 75 },
+    { skill: "GraphQL", ratingPercentage: 70 },
+    { skill: "Responsive Design", ratingPercentage: 90 }
   ];
 
   const projectsDetails = [
     {
-      title: "Personal Portfolio Website",
-      duration: { fromDate: "2020", toDate: "2021" },
+      title: "Acuo Admin Portal",
+      duration: { dates: "2006-2008" },
       description:
-        "A Personal Portfolio website to showcase all my details and projects at one place.",
-      subHeading: "Technologies Used: React JS, Bootsrap",
+        "A web application which assisted administrators in managing very large amounts of medical images, and their associated data.",
+      subHeading: "Technologies Used: AngularJS, C#, PostgreSQL, Elasticsearch, Bootstrap",
     },
     {
-      title: "Mobile E-shop ",
-      duration: { fromDate: "2020", toDate: "2021" },
+      title: "Training.Hyland.com",
+      duration: { dates: "2006-2008" },
       description:
-        "An ecommerce application designed to sell products online wth payment system integration",
+        "An eLearning website which offered video based courses (either free or requiring subscriptions), as well as the opportunities it purchase in-person Instructor-led courses.",
       subHeading:
-        "Technologies Used:  React Native, Mongo DB, Express Js, Node Js, Redux.",
-    },
-    {
-      title: "Ecommerce Website ",
-      duration: { fromDate: "2020", toDate: "2021" },
-      description:
-        "Online ecommerce website for showcasing and selling products onlne with payment system integration, both Paypal and Stripe",
-      subHeading:
-        "Technologies Used: Mongo DB, Epress Js, React Js, Node JS, Redux, Bootstrap.",
-    },
+        "Technologies Used:  Sitecore, HTML, CSS, JavaScript",
+    }
   ];
 
   const resumeDetails = [
     <div className="resume-screen-container" key="education">
       <ResumeHeading
-        heading={"University of Legon Accra, Ghana"}
-        subHeading={"BACHELOR OF SCIENCE INFORMATION TECHNOLOGY"}
-        fromDate={"2014"}
-        toDate={"2018"}
+        heading={"Frostburg State University"}
+        subHeading={"Bachelor of Fine Arts: Graphic Design"}
+        dates={"2007 - 2011"}
       />
 
       <ResumeHeading
-        heading={"National Youth Service Corps"}
-        subHeading={"Ministry Of Science And Technogy. Uyo Akwa Ibom State"}
-        fromDate={"2019"}
-        toDate={"2020"}
+        heading={"University of Wollongong"}
+        subHeading={"Study Abroad with \"AustraLearn\""}
+        dates={"Spring 2010"}
       />
       <ResumeHeading
-        heading={"High School "}
-        subHeading={"Command Secondary School Mbiri"}
-        fromDate={"2007"}
-        toDate={"2012"}
+        heading={"Middletown High School"}
+        dates={"2003 - 2007"}
       />
     </div>,
 
@@ -116,33 +98,76 @@ const Resume = (props) => {
     <div className="resume-screen-container" key="work-experience">
       <div className="experience-container">
         <ResumeHeading
-          heading={"Ehizeex Technoloy"}
-          subHeading={"FULL STACK DEVELOPER INTERN"}
-          fromDate={"2021"}
-          toDate={"Present"}
+          heading={"Hyland"}
+          subHeading={"Developer II"}
+          dates={"2021 - Present"}
         />
         <div className="experience-description">
-          <span className="resume-description-text">
-            Currently working as MERN stack web and mobile developer and also an
-            online instructor on udemy.
-          </span>
+          <h6 className="resume-description-text">
+            <ul>
+              <li>Collaborated with the design team, by listening to creative proposals, discussing the scope of requirements, and by providing feedback on digital assets.</li>
+              <li>Designed and updated layouts to meet usability and performance requirements.</li>
+              <li>Maintained and updated web application dependencies to meet best practices for security and reliability.</li>
+              <li>Implemented a reporting dashboard for the product utilizing Elasticsearch and ChartJS.</li>
+              <li>Redesigned product interface while updating CSS framework version (Bootstrap)</li>
+            </ul>
+          </h6>
+        </div>
+        <div class="resume-main-heading align-items-center">
+          <h5 className="mb-0">Developer I</h5>
+          <div class="heading-date">
+            11/2020 - 09/2021
+          </div>
         </div>
         <div className="experience-description">
-          <span className="resume-description-text">
-            - Developed an ecommerce website for client with the dashboard for
-            managing the products, managing reviews, users, payment etc. .
-          </span>
-          <br />
-          <span className="resume-description-text">
-            - Integrated the web app with backend services to create new user
-            onboarding application with dynamic form content.{" "}
-          </span>
-          <br />
-          <span className="resume-description-text">
-            - I stretch my mental capacity to develope UI as per the given
-            designs.
-          </span>
-          <br />
+          <h6 className="resume-description-text">
+            <ul>
+              <li>Tested web-based product functionality and delivered iterations to stakeholders.</li>
+              <li>Performed user experience quality assurance testing to identify and remedy shortcomings.</li>
+              <li>Translated UX and business requirements into elegant code solutions.</li>
+            </ul>
+          </h6>
+        </div>
+        <div class="resume-main-heading align-items-center">
+          <h5 className="mb-0">Web Delivery Specialist</h5>
+          <div class="heading-date">
+            02/2016 - 11/2020
+          </div>
+        </div>
+        <div className="experience-description">
+          <h6 className="resume-description-text">
+            <ul>
+              <li>Coded using HTML, CSS and JavaScript to develop features for both mobile and desktop platforms.</li>
+              <li>Worked with marketing team to deliver digital creative campaigns and initiatives.</li>
+            </ul>
+          </h6>
+        </div>
+        <div class="resume-main-heading align-items-center">
+          <h5 className="mb-0">E-Learning Specialist</h5>
+          <div class="heading-date">
+            07/2015 - 02/2016
+          </div>
+        </div>
+        <div className="experience-description">
+          <h6 className="resume-description-text">
+            <ul>
+              <li>Utilized software and e-learning development tools to develop interactive training courses.</li>
+              <li>Created and edited technical video media to enhance learner engagement.</li>
+            </ul>
+          </h6>
+        </div>
+        <div class="resume-main-heading align-items-center">
+          <h5 className="mb-0">Associate E-Learning Specialist</h5>
+          <div class="heading-date">
+            09/2013 - 07/2015
+          </div>
+        </div>
+        <div className="experience-description">
+          <h6 className="resume-description-text">
+            <ul>
+              <li>Developed and procured graphics and content to incorporate into e-learning applications.</li>
+            </ul>
+          </h6>
         </div>
       </div>
     </div>,
@@ -174,8 +199,7 @@ const Resume = (props) => {
           heading={projectsDetails.title}
           subHeading={projectsDetails.subHeading}
           description={projectsDetails.description}
-          fromDate={projectsDetails.duration.fromDate}
-          toDate={projectsDetails.duration.toDate}
+          dates={projectsDetails.duration.dates}
         />
       ))}
     </div>,
@@ -183,22 +207,26 @@ const Resume = (props) => {
     /* Interests */
     <div className="resume-screen-container" key="interests">
       <ResumeHeading
-        heading="Teaching"
-        description="Apart from being a tech enthusiast and a code writer, i also love to teach people what i know simply because i believe in sharing."
+        heading="Hiking"
+        description="As a somewhat new Coloradoan I've enjoyed the access to fantastic trails and mountains. "
       />
       <ResumeHeading
-        heading="Music"
-        description="Listening to soothing music is something i can never compromise with, skimming through Spotify's pop songs charts is at times the best stress reliever that i can get my hands on."
+        heading="Skateboarding"
+        description="Skateboarding has been a lifelong passion of mine which inspired me to make and design boards."
       />
       <ResumeHeading
-        heading="Competitive Gaming"
-        description="I like to challenge my reflexes a lot while competing in football games, pushing the rank and having interactive gaming sessions excites me the most."
+        heading="Swimming"
+        description="In my teen years I was a lifegaurd briefly, but my love for the water has remained."
+      />
+      <ResumeHeading
+        heading="Learning"
+        description="I love to continue to challenge myself by taking on new opportunities for growth. I mainly am interested in keeping up with web technologies, design trends, and learning new languages."
       />
     </div>,
   ];
 
   const handleCarousal = (index) => {
-    let offsetHeight = 360;
+    let offsetHeight = 720;
 
     let newCarousalOffset = {
       style: { transform: "translateY(" + index * offsetHeight * -1 + "px)" },
@@ -234,27 +262,20 @@ const Resume = (props) => {
     );
   };
 
-  useEffect(() => {
-    return () => {
-      /* UNSUBSCRIBE THE SUBSCRIPTIONS */
-      fadeInSubscription.unsubscribe();
-    };
-  }, [fadeInSubscription]);
-
   return (
-    <div className="my-5" id="Resume">
-      <div className="container py-lg-5 position-relative">
+    <div className="my-5 container" id="Resume">
+      <div className="py-lg-5 position-relative">
         <div className='text-black-50 fw-bold section-title'>
           <span className='position-absolute-lg right-lg'>RESUME</span>
         </div>
       </div>
-      <div className="resume-container screen-container fade-in py-lg-5" id={props.id || ""}>
-        <div className="resume-content">
+      <div className="resume-container screen-container fade-in py-lg-5">
+        <div className="resume-content d-flex flex-wrap w-100">
           <div className="resume-card">
             <div className="resume-bullets">
               <div className="bullet-container">
                 <div className="bullet-icons"></div>
-                <div className="bullets fw-bold">{getBullets()}</div>
+                <div className="bullets fw-bold d-flex flex-column justify-content-around" style={{height: "80%"}}>{getBullets()}</div>
               </div>
             </div>
             <div className="resume-bullet-details">{getResumeScreens()}</div>

@@ -5,7 +5,7 @@ import Projects from './Projects/Projects';
 
 export default function Portfolio() {
     return (
-        <div id='Portfolio'>
+        <div id='Portfolio' style={{overflowX: "clip"}}>
             <Projects />
             <Gallery />
         </div>

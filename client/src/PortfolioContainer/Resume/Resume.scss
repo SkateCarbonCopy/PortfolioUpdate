@@ -12,9 +12,7 @@
   
   .resume-card {
     display: flex;
-    height: 360px;
-    width: 1000px;
-    /* margin: 80px 0; */
+    height: 720px;
   }
   
   .resume-bullets {
@@ -25,18 +23,13 @@
   
   .resume-bullet-details {
     flex-grow: 1;
-    width: 600px;
+    width: 100%;
     overflow: hidden;
     padding: 0 0 0 80px;
   }
   
   .experience-description {
-    margin: 10px 0 0 0;
     text-align: justify;
-  }
-  
-  .resume-description-text {
-    font-size: 12px;
   }
   
   .resume-details-carousal {
@@ -106,7 +99,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: 360px;
+    height: 720px;
     width: 100%;
   }
   
@@ -135,15 +128,13 @@
     left: -30px;
     height: 15px;
     width: 15px;
-    top: 5px;
+    top: 8px;
     border-radius: 50%;
     background-color: var(--logo-dark-orange);
   }
   
   .resume-sub-heading {
-    font-size: 14px;
     color: var(--black);
-    margin: 10px 0 0 0;
   }
   
   .resume-heading-description {
@@ -154,7 +145,6 @@
   .heading-date {
     background-color: var(--logo-dark-orange);
     padding: 4px 12px;
-    font-size: 14px;
     border-radius: 14px;
     color: var(--white);
   }
@@ -194,11 +184,7 @@
   }
   
   /* IPAD PRO RESPONSIVENESS */
-  @media only screen and (max-width: 1110px) {
-    .resume-card {
-      width: 880px;
-    }
-  
+  @media only screen and (max-width: 1110px) {  
     .resume-bullet-details {
       padding: 0 0 0 70px;
     }
@@ -228,11 +214,10 @@
       flex-direction: column;
       margin: 30px 0;
       align-items: center;
-      width: 90%;
     }
   
     .resume-bullet-details {
-      height: 360px;
+      height: 720px;
       padding: 0;
       width: fit-content;
     }
