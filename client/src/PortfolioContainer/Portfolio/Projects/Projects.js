@@ -21,7 +21,7 @@ export default function Projects() {
                     <span>PORTFOLIO</span>
                 </div>
             </div>
-            <div id='Projects'>
+            <div id='Projects' className='mt-3 mt-lg-0'>
                 {/* Dashboard Update */}
                 <div className="row">
                     <div className="col-lg-7 position-relative mb-5">
@@ -33,7 +33,7 @@ export default function Projects() {
                             >
                             <img
                                 src={imagesImport["AAP18.png"]}
-                                className='img-thumbnail h-lg-80'
+                                className='img-thumbnail h-lg-80 d-none d-lg-block'
                                 alt={"Acuo Admin Portal 1.8 Home Screen"}
                             />
                         </a>
@@ -45,7 +45,7 @@ export default function Projects() {
                             >
                             <img
                                 src={imagesImport["dashboard20.png"]}
-                                className='img-thumbnail position-absolute h-lg-80 right-0 bottom-0'
+                                className='img-thumbnail position-absolute-lg h-lg-80 right-0 bottom-0'
                                 alt={"Acuo Admin Portal 2.0 Dashboard"}
                             />
                         </a>
@@ -83,25 +83,25 @@ export default function Projects() {
                     <div className="col-lg-7 position-relative mb-5">
                         <a
                             href={imagesImport["StudyHistoryWF.png"]}
-                            data-lightbox="Dashboard"
+                            data-lightbox="Features"
                             data-title={"Study History Wireframe"}
                             data-alt={"Study History Wireframe"}
                             >
                             <img
                                 src={imagesImport["StudyHistoryWF.png"]}
-                                className='img-thumbnail h-lg-80'
+                                className='img-thumbnail h-lg-80 d-none d-lg-block'
                                 alt={"Study History Wireframe"}
                             />
                         </a>
                         <a
                             href={imagesImport["StudyHistoryProd.png"]}
-                            data-lightbox="Dashboard"
+                            data-lightbox="Features"
                             data-title={"Study History Production"}
                             data-alt={"Study History Production"}
                             >
                             <img
                                 src={imagesImport["StudyHistoryProdLg.png"]}
-                                className='img-thumbnail position-absolute h-lg-80 right-0 bottom-0'
+                                className='img-thumbnail position-absolute-lg h-lg-80 right-0 bottom-0'
                                 alt={"Study History Production"}
                             />
                         </a>
