@@ -2,11 +2,15 @@ import React from 'react';
 import './Projects.scss';
 
 function importAll(r) {
-    let images = {};
-    r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
+    const images = {};
+    r.keys().map((item, index) => { 
+        return (
+            images[item.replace('./', '')] = r(item)
+        )
+     });
     return images;
 }
-  
+
 const imagesImport = importAll(require.context('../../../assets/img/portfolio', false, /\.(png|jpe?g|svg)$/));
 
 export default function Projects() {
@@ -30,6 +34,7 @@ export default function Projects() {
                             src={imagesImport["AAP18.png"]}
                             className='img-thumbnail'
                             style={{height: "80%"}}
+                            alt={"Acuo Admin Portal 1.8 Home Screen"}
                         />
                     </a>
                     <a 
@@ -42,7 +47,7 @@ export default function Projects() {
                             src={imagesImport["dashboard20.png"]}
                             className='img-thumbnail position-absolute'
                             style={{height: "80%", right: 0, bottom: 0}}
-                            alt=""
+                            alt={"Acuo Admin Portal 2.0 Dashboard"}
                         />
                     </a>
                 </div>
@@ -68,6 +73,7 @@ export default function Projects() {
                             src={imagesImport["bootstrapExample.png"]}
                             className='img-thumbnail'
                             style={{height: "100%"}}
+                            alt={"Bootstrap 5 Page Example"}
                         />
                     </a>
                 </div>
@@ -83,6 +89,7 @@ export default function Projects() {
                             src={imagesImport["StudyHistoryWF.png"]}
                             className='img-thumbnail'
                             style={{height: "80%"}}
+                            alt={"Study History Wireframe"}
                         />
                     </a>
                     <a 
@@ -95,7 +102,7 @@ export default function Projects() {
                             src={imagesImport["StudyHistoryProdLg.png"]}
                             className='img-thumbnail position-absolute'
                             style={{height: "80%", width:"auto", right: 0, bottom: 0}}
-                            alt=""
+                            alt={"Study History Production"}
                         />
                     </a>
                 </div>

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Gallery from './Gallery/Gallery';
 import './Portfolio.scss';
 import Projects from './Projects/Projects';

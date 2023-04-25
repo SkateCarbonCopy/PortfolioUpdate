@@ -2,8 +2,12 @@ import React from 'react';
 import './References.scss';
 
 function importAll(r) {
-    let images = {};
-    r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
+    const images = {};
+    r.keys().map((item, index) => { 
+        return (
+            images[item.replace('./', '')] = r(item)
+        )
+     });
     return images;
 }
   

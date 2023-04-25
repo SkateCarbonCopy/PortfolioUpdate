@@ -184,7 +184,7 @@ export default function Gallery() {
     ];
 
     return (
-        <div className="my-5">
+        <div className="my-5" id='Gallery'>
             <div className="pt-lg-5 position-relative" style={{zIndex: -100}}>
                 <div className='text-black-50 fw-bold section-title section-title-sm'>
                     <span>GALLERY</span>
@@ -193,21 +193,23 @@ export default function Gallery() {
             <div style={{zIndex: 100}}>
                 <ResponsiveMasonry columnsCountBreakPoints={{350: 1, 750: 3, 1200: 5}} className='gallery-bkgd'>
                     <Masonry gutter={"1.5rem"}>
-                        {images.map((image, i) => (
-                            <a 
-                                href={imagesImport[image.src]} 
-                                data-lightbox="gallery"
-                                data-title={image.title + "&nbsp;-&nbsp;" + "<span>" + image.description + "</span>"}
-                                data-alt={image.title}
-                                key={i}
-                                >
-                                <img
-                                    src={imagesImport[image.src]}
-                                    style={{width: "100%", display: "block"}}
-                                    alt=""
-                                />
-                            </a>
-                        ))}
+                        {images.map((image, i) => {
+                            return (
+                                <a 
+                                    href={imagesImport[image.src]} 
+                                    data-lightbox="gallery"
+                                    data-title={image.title + "&nbsp;-&nbsp;<span>" + image.description + "</span>"}
+                                    data-alt={image.title}
+                                    key={i}
+                                    >
+                                    <img
+                                        src={imagesImport[image.src]}
+                                        style={{width: "100%", display: "block"}}
+                                        alt=""
+                                    />
+                                </a>
+                            )
+                        })}
                     </Masonry>
                 </ResponsiveMasonry>
             </div>
