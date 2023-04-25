@@ -19,7 +19,8 @@ export default function Header() {
                     </button>
                     <div className="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
                         <div className="navbar-nav">
-                            <div className='d-flex grow-nav-link'>
+                            {/* About Me */}
+                            <div className='d-flex grow-nav-link order-2 order-lg-1'>
                                 <Link
                                     className="nav-link site-nav-link-lg mx-lg-4 fw-bold text-white-75"
                                     to="AboutMe"
@@ -29,7 +30,8 @@ export default function Header() {
                                     duration={500}
                                     >About Me</Link>
                             </div>
-                            <div className='d-flex grow-nav-link'>
+                            {/* Portfolio */}
+                            <div className='d-flex grow-nav-link order-3 order-lg-2'>
                                 <Link
                                     className="nav-link site-nav-link-lg mx-lg-4 fw-bold text-white-75"
                                     to="Portfolio"
@@ -39,7 +41,8 @@ export default function Header() {
                                     duration={500}
                                     >Portfolio</Link>
                             </div>
-                            <div className='d-flex grow-nav-link'>
+                            {/* Home */}
+                            <div className='d-flex grow-nav-link order-1 order-lg-3'>
                                 <Link
                                     className="nav-link site-nav-link-lg"
                                     to="/"
@@ -51,7 +54,8 @@ export default function Header() {
                                         <img src={logo} style={{width: "30px", height: "30px"}} alt="Colin Gastelle Logo" />
                                     </Link>
                             </div>
-                            <div className='d-flex grow-nav-link'>
+                            {/* References */}
+                            <div className='d-flex grow-nav-link order-4'>
                                 <Link
                                     className="nav-link site-nav-link-lg mx-lg-4 fw-bold text-white-75"
                                     to="References"
@@ -61,7 +65,8 @@ export default function Header() {
                                     duration={500}
                                     >References</Link>
                             </div>
-                            <div className='d-flex grow-nav-link'>
+                            {/* Resume */}
+                            <div className='d-flex grow-nav-link order-5'>
                                 <Link
                                     className="nav-link site-nav-link-lg mx-lg-4 fw-bold text-white-75"
                                     to="Resume"

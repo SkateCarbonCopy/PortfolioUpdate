@@ -23,7 +23,7 @@ const Resume = (props) => {
         </div>
         <div className="resume-sub-heading">
           <h5 className="d-inline">{props.subHeading ? props.subHeading : ""}</h5> 
-          <span class="ms-3 badge bg-light text-dark">{props.subHeadingDates ? props.subHeadingDates : ""}</span>
+          <span className="ms-3 badge bg-light text-dark">{props.subHeadingDates ? props.subHeadingDates : ""}</span>
         </div>
         <div className="resume-heading-description">
           <h6>{props.description ? props.description : ""}</h6>
@@ -113,9 +113,9 @@ const Resume = (props) => {
             </ul>
           </h6>
         </div>
-        <div class="resume-main-heading align-items-center">
+        <div className="resume-main-heading align-items-center">
           <h5 className="mb-0">Developer I</h5>
-          <div class="heading-date">
+          <div className="heading-date">
             11/2020 - 09/2021
           </div>
         </div>
@@ -128,9 +128,9 @@ const Resume = (props) => {
             </ul>
           </h6>
         </div>
-        <div class="resume-main-heading align-items-center">
+        <div className="resume-main-heading align-items-center">
           <h5 className="mb-0">Web Delivery Specialist</h5>
-          <div class="heading-date">
+          <div className="heading-date">
             02/2016 - 11/2020
           </div>
         </div>
@@ -142,9 +142,9 @@ const Resume = (props) => {
             </ul>
           </h6>
         </div>
-        <div class="resume-main-heading align-items-center">
+        <div className="resume-main-heading align-items-center">
           <h5 className="mb-0">E-Learning Specialist</h5>
-          <div class="heading-date">
+          <div className="heading-date">
             07/2015 - 02/2016
           </div>
         </div>
@@ -156,9 +156,9 @@ const Resume = (props) => {
             </ul>
           </h6>
         </div>
-        <div class="resume-main-heading align-items-center">
+        <div className="resume-main-heading align-items-center">
           <h5 className="mb-0">Associate E-Learning Specialist</h5>
-          <div class="heading-date">
+          <div className="heading-date">
             09/2013 - 07/2015
           </div>
         </div>
@@ -255,21 +255,27 @@ const Resume = (props) => {
     return (
       <div
         style={carousalOffsetStyle.style}
-        className="resume-details-carousal"
-      >
+        className="resume-details-carousal">
         {resumeDetails.map((ResumeDetail) => ResumeDetail)}
       </div>
     );
   };
 
   return (
-    <div className="my-5 container" id="Resume">
+    <div className="my-5 container-lg" id="Resume">
       <div className="py-lg-5 position-relative">
         <div className='text-black-50 fw-bold section-title'>
           <span className='position-absolute-lg right-lg'>RESUME</span>
         </div>
       </div>
-      <div className="resume-container screen-container fade-in py-lg-5">
+      {/* Resume Carousel */}
+      <div className="resume-container screen-container py-lg-5 d-none d-lg-block">
+        {/* Download Button */}
+        <div className="d-none d-lg-flex justify-content-end">
+          <a className="btn btn-info" href="resume.pdf" download='Colin Gastelle Resume.pdf' style={{zIndex: 1000}}>
+            <i className="fa-solid fa-download"></i> Download
+          </a>
+        </div>
         <div className="resume-content d-flex flex-wrap w-100">
           <div className="resume-card">
             <div className="resume-bullets">
@@ -281,6 +287,12 @@ const Resume = (props) => {
             <div className="resume-bullet-details">{getResumeScreens()}</div>
           </div>
         </div>
+      </div>
+      {/* Resume Embed */}
+      <div className="d-lg-none mt-3">
+        <object data="resume.pdf" type="application/pdf" width="100%" height="700px">
+          <p>Unable to display PDF file. <a href="resume.pdf" download='Colin Gastelle Resume.pdf'>Download</a> instead.</p>
+        </object>
       </div>
     </div>
   );

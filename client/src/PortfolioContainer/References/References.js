@@ -47,15 +47,15 @@ export default function References() {
 
     const mapQuoteParagraphs = function (arr) {
         return arr.map((ref, i) => (
-            <span className={`mb-3 ${i < arr.length-1 && i !== 0 ? "d-block" : ""} ${i === 1 ? "mt-3" : ""}`}>
+            <span className={`mb-3 ${i < arr.length-1 && i !== 0 ? "d-block" : ""} ${i === 1 ? "mt-3" : ""}`} key={i}>
                 {ref}
             </span> 
         ))
     }
 
     const getReferences = () => {
-    return referenceDetails.map((ref) => (
-        <div className="col-lg-4 text-center d-flex">
+    return referenceDetails.map((ref, i) => (
+        <div className="col-lg-4 my-5 my-lg-0 text-center d-flex" key={i}>
             <div className='profile position-relative d-flex flex-wrap align-content-center justify-content-center'>
                 <img
                     src={imagesImport[ref.img]}
@@ -63,16 +63,18 @@ export default function References() {
                     className='user'
                 />
                 <blockquote>{mapQuoteParagraphs(ref.quoteParagraphs)}</blockquote>
-                <h4 className='dark-orange fw-bold'>{ref.name}</h4>
-                <h5>{ref.role}</h5>
+                <div>
+                    <h4 className='dark-orange fw-bold'>{ref.name}</h4>
+                    <h5>{ref.role}</h5>
+                </div>
             </div>
         </div>
     ));
     };
 
     return (
-        <div className="my-5 dark-section" id='References'>
-            <div className="py-lg-5 container position-relative">
+        <div className="pt-5 dark-section" id='References'>
+            <div className="pb-lg-5 container position-relative">
                 <div className='text-white-50 fw-bold section-title section-title-sm'>
                     <span>REFERENCES</span>
                 </div>
@@ -81,7 +83,7 @@ export default function References() {
                     <div className="row my-2 d-flex flex-wrap">
                         {getReferences()}
                     </div>
-                </section>
+            </section>
         </div>
     )
 }

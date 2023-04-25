@@ -19,14 +19,24 @@
   background-color: var(--tan-shade);
 }
 
+// XS 
 .section-title {
-    font-size: 7.5em;
+    font-size: 6em;
     line-height: .75em;
 }
 
 .section-title-sm {
-  font-size: 6em;
-  line-height: .75em;
+  font-size: 4em;
+}
+
+@media only screen and (min-width: map.get($grid-breakpoints, "sm")) {
+  .section-title {
+      font-size: 8em;
+  }
+
+  .section-title-sm {
+    font-size: 6em;
+  }
 }
 
 @media only screen and (min-width: map.get($grid-breakpoints, "lg")) {
