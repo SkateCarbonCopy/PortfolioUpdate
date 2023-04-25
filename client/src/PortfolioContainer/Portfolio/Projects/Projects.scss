@@ -1,6 +1,6 @@
 //pulling in $grid-breakpoints object from index.scss
 @use "sass:map";
-@import '../../index.scss';
+@import '../../../index.scss';
 
 .overlap {
     margin-left: -3%;
