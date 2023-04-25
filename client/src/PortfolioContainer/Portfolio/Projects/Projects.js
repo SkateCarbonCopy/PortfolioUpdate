@@ -33,8 +33,7 @@ export default function Projects() {
                             >
                             <img
                                 src={imagesImport["AAP18.png"]}
-                                className='img-thumbnail'
-                                style={{height: "80%"}}
+                                className='img-thumbnail h-lg-80'
                                 alt={"Acuo Admin Portal 1.8 Home Screen"}
                             />
                         </a>
@@ -46,8 +45,7 @@ export default function Projects() {
                             >
                             <img
                                 src={imagesImport["dashboard20.png"]}
-                                className='img-thumbnail position-absolute'
-                                style={{height: "80%", right: 0, bottom: 0}}
+                                className='img-thumbnail position-absolute h-lg-80 right-0 bottom-0'
                                 alt={"Acuo Admin Portal 2.0 Dashboard"}
                             />
                         </a>
@@ -74,8 +72,7 @@ export default function Projects() {
                             >
                             <img
                                 src={imagesImport["bootstrapExample.png"]}
-                                className='img-thumbnail'
-                                style={{height: "100%"}}
+                                className='img-thumbnail h-lg-100'
                                 alt={"Bootstrap 5 Page Example"}
                             />
                         </a>
@@ -92,8 +89,7 @@ export default function Projects() {
                             >
                             <img
                                 src={imagesImport["StudyHistoryWF.png"]}
-                                className='img-thumbnail'
-                                style={{height: "80%"}}
+                                className='img-thumbnail h-lg-80'
                                 alt={"Study History Wireframe"}
                             />
                         </a>
@@ -105,8 +101,7 @@ export default function Projects() {
                             >
                             <img
                                 src={imagesImport["StudyHistoryProdLg.png"]}
-                                className='img-thumbnail position-absolute'
-                                style={{height: "80%", width:"auto", right: 0, bottom: 0}}
+                                className='img-thumbnail position-absolute h-lg-80 right-0 bottom-0'
                                 alt={"Study History Production"}
                             />
                         </a>
