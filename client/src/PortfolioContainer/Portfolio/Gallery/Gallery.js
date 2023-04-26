@@ -1,5 +1,6 @@
 import React from 'react';
 import Masonry, {ResponsiveMasonry} from "react-responsive-masonry";
+import { Slide } from "react-awesome-reveal";
 import './Gallery.scss';
 
 function importAll(r) {
@@ -199,19 +200,21 @@ export default function Gallery() {
                     <Masonry gutter={"1.5rem"}>
                         {images.map((image, i) => {
                             return (
-                                <a 
-                                    href={imagesImport[image.src]} 
-                                    data-lightbox="gallery"
-                                    data-title={image.title + "&nbsp;-&nbsp;<span>" + image.description + "</span>"}
-                                    data-alt={image.title}
-                                    key={i}
-                                    >
-                                    <img
-                                        src={imagesImport[image.src]}
-                                        style={{width: "100%", display: "block"}}
-                                        alt=""
-                                    />
-                                </a>
+                                <Slide cascade="true">
+                                    <a 
+                                        href={imagesImport[image.src]} 
+                                        data-lightbox="gallery"
+                                        data-title={image.title + "&nbsp;-&nbsp;<span>" + image.description + "</span>"}
+                                        data-alt={image.title}
+                                        key={i}
+                                        >
+                                        <img
+                                            src={imagesImport[image.src]}
+                                            style={{width: "100%", display: "block"}}
+                                            alt=""
+                                        />
+                                    </a>
+                                </Slide>
                             )
                         })}
                     </Masonry>
