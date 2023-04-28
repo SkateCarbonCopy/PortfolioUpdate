@@ -11,9 +11,11 @@ export default function ToggleTheme() {
         const currentThemeSetting = htmlDoc.getAttribute("data-bs-theme");
         if (currentThemeSetting === "dark") {
             themeColor = "light";
+            console.log(`Updated theme to ${themeColor}`);
             htmlDoc.setAttribute("data-bs-theme", "light");
         } else {
             themeColor = "dark";
+            console.log(`Updated theme to ${themeColor}`);
             htmlDoc.setAttribute("data-bs-theme", "dark");
         }
     }
