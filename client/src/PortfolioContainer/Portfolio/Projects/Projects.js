@@ -108,8 +108,7 @@ export default function Projects() {
                     </div>
                     <div className="col-lg-5 align-self-center mb-5 px-4">
                         <h1>New Features</h1>
-                        <h5>I was responsible for designing and implementing a new product dashboard as part of a new version release of the product Acuo Admin Portal. This dashboard was to replace the previous home page. My goal was to make it as informative, and engaging as possible. I researched various charting libraries and landed on ChartJS to implement the line and pie chart, while the speedometer was created via the D3 library.</h5>
-                        <h5>The previous home page largely acted as a navigational component, so a left hand column of quick links was added for users who liked to have a one click method of navigating the site.</h5>
+                        <h5>I reinvented the process of adding new features to Acuo Admin Portal by introducing a more design focused strategy that included wireframes created via Balsamiq, a mockup phase, and implementation phase. Each of these were documented in Jira and allowed stakeholders more opportunities for comment and a closer association with the design process. </h5>
                     </div>
                 </div>
             </div>
