@@ -14,12 +14,20 @@
     color: var(--logo-dark-orange);
 }
 
+[data-bs-theme=dark] .dark-orange {
+    color: var(--dark-mode-dark-orange);
+}
+
 .dark-tan {
     color: var(--site-nav-dark);
 }
 
 .very-dark-tan {
     color: var(--site-nav-very-dark);
+}
+
+[data-bs-theme=dark] .very-dark-tan {
+    color: var(--dark-mode-site-nav-very-dark)
 }
 
 .transparent-bg {

@@ -13,8 +13,8 @@ export default function AboutMe() {
                 </div>
                 <div className="row justify-content-end my-lg-5 my-3">
                     <div className='col-lg-9' style={{zIndex: 100}}>
-                        <h1>Hi, my name is Colin Gastelle.</h1>
-                        <h3 className='dark-orange fw-bold text-stroke'>
+                        <h1 className='text-light' >Hi, my name is Colin Gastelle.</h1>
+                        <h3 className='very-dark-tan fw-bold'>
                             I am&nbsp;
                             <TypeAnimation sequence={[
                                 'an enthusiastic dev', 3000, 

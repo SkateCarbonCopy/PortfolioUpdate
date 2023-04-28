@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import dualityPortrait from '../../../assets/img/duality.png';
+import dualityPortraitDark from '../../../assets/img/dualityDark.png';
 import { Link } from 'react-scroll';
 import './Landing.scss';
 
@@ -134,7 +135,8 @@ export default function Landing() {
                                         </Link>
                                     </div>
                                 </div>
-                                <img id="duality-img" className="duality-img img-fluid" src={dualityPortrait} alt="Colin Gastelle Combined Portraits"></img>
+                                <img id="duality-img" className="duality-img img-fluid position-relative lm-only" src={dualityPortrait} alt="Colin Gastelle Combined Portraits"></img>
+                                <img id="duality-img" className="duality-img img-fluid position-relative dm-only" src={dualityPortraitDark} alt="Colin Gastelle Combined Portraits"></img>
                                 <div id="designer-img" className="designer-img" style={{left: "100px", opacity: 1, width: "420px"}}></div>
                                 <div id="developer-img" className="developer-img" style={{right: "100px", opacity: 1, width: "420px"}}></div>
                             </div>

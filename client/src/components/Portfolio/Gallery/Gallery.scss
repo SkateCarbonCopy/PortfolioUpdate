@@ -4,6 +4,10 @@
     padding: 0 1.5rem;
 }
 
+[data-bs-theme=dark] .gallery-bkgd > div {
+    background-color: rgb(var(--bs-dark-rgb));
+}
+
 .lb-data .lb-caption {
     font-size: 16px !important;
 }

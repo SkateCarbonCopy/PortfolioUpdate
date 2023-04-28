@@ -245,7 +245,7 @@ const Resume = (props) => {
         }
         key={index}
       >
-        <i className={'me-3 very-dark-tan ' + bullet.icon}></i>
+        <i className={'me-3 resume-icon ' + bullet.icon}></i>
         <span className="bullet-label">{bullet.label}</span>
       </div>
     ));

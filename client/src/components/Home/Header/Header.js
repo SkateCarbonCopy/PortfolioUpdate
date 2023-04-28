@@ -9,20 +9,20 @@ export default function Header() {
     const scrollToTop = function () {
         animateScroll.scrollToTop();
     }
-    
+
     return (
         <Scrollspy className='d-flex w-100' items={["AboutMe", "Portfolio", "References", "Resume"]}>
-            <nav className="navbar navbar-dark navbar-expand-lg navbar-dark-custom fixed-top" id='site-nav'>
-                <div className="container-fluid">
+            <nav className="navbar navbar-light bg-light navbar-expand-lg fixed-top" id='site-nav'>
+                <div className="container-fluid justify-content-end">
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon text-light"></span>
+                        <span className="navbar-toggler-icon text-light"></span>
                     </button>
-                    <div className="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
-                        <div className="navbar-nav">
+                    <div className="collapse navbar-collapse justify-content-end justify-content-lg-center" id="navbarNavAltMarkup">
+                        <div className="navbar-nav align-items-end align-items-lg-center">
                             {/* About Me */}
                             <div className='d-flex grow-nav-link order-2 order-lg-1'>
                                 <Link
-                                    className="nav-link site-nav-link-lg mx-lg-4 fw-bold text-white-75"
+                                    className="nav-link site-nav-link-lg mx-lg-4 fw-bold text-black-75"
                                     to="AboutMe"
                                     spy={true}
                                     smooth={true}
@@ -33,7 +33,7 @@ export default function Header() {
                             {/* Portfolio */}
                             <div className='d-flex grow-nav-link order-3 order-lg-2'>
                                 <Link
-                                    className="nav-link site-nav-link-lg mx-lg-4 fw-bold text-white-75"
+                                    className="nav-link site-nav-link-lg mx-lg-4 fw-bold text-black-75"
                                     to="Portfolio"
                                     spy={true}
                                     smooth={true}
@@ -44,7 +44,7 @@ export default function Header() {
                             {/* Home */}
                             <div className='d-flex grow-nav-link order-1 order-lg-3'>
                                 <Link
-                                    className="nav-link site-nav-link-lg"
+                                    className="nav-link site-nav-link-lg mt-lg-0 mt-3"
                                     to="/"
                                     spy={true}
                                     smooth={true}
@@ -57,7 +57,7 @@ export default function Header() {
                             {/* References */}
                             <div className='d-flex grow-nav-link order-4'>
                                 <Link
-                                    className="nav-link site-nav-link-lg mx-lg-4 fw-bold text-white-75"
+                                    className="nav-link site-nav-link-lg mx-lg-4 fw-bold text-black-75"
                                     to="References"
                                     spy={true}
                                     smooth={true}
@@ -68,7 +68,7 @@ export default function Header() {
                             {/* Resume */}
                             <div className='d-flex grow-nav-link order-5'>
                                 <Link
-                                    className="nav-link site-nav-link-lg mx-lg-4 fw-bold text-white-75"
+                                    className="nav-link site-nav-link-lg mx-lg-4 fw-bold text-black-75"
                                     to="Resume"
                                     spy={true}
                                     smooth={true}

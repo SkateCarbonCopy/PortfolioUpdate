@@ -20,6 +20,10 @@
     height: 100%;
     width: 320px;
   }
+
+  [data-bs-theme=dark] .resume-bullets {
+    box-shadow: 15px 0 9px -15px var(--dark-mode-site-nav-very-dark);
+  }
   
   .resume-bullet-details {
     flex-grow: 1;
@@ -62,6 +66,10 @@
     width: 30px;
     transition: width 0.6s ease;
   }
+
+  [data-bs-theme=dark] .bullet {
+    background-color: var(--dark-mode-site-nav-very-dark);
+  }
   
   .bullet-label {
     font-size: 14px;
@@ -81,11 +89,27 @@
     position: absolute;
   }
 
+  [data-bs-theme=dark] .bullet-icons {
+    background-color: var(--dark-mode-site-nav-very-dark);
+  }
+
   .resume-content .bullet i::before {
     display: block;
     width: 25px;
   }
+
+  .bullet {
+    z-index: 9999;
+  }
+
+  .resume-icon {
+    color: var(--site-nav-very-dark);
+  }
   
+  [data-bs-theme=dark] .resume-icon {
+    color: var(--dark-mode-site-nav-very-dark);
+  }
+
   .selected-bullet {
     color: var(--white);
     width: 100%;
@@ -93,6 +117,14 @@
 
   .selected-bullet i {
     color: var(--white);
+  }
+
+  [data-bs-theme=dark] .selected-bullet {
+    color: var(--bs-dark);
+    
+    & i {
+      color: var(--bs-dark);
+    }
   }
   
   .resume-screen-container {
@@ -118,6 +150,10 @@
     color: var(--dark-orange);
     font-size: 16px;
   }
+
+  [data-bs-theme=dark] .resume-main-heading span {
+    color: var(--dark-mode-tan-shade);
+  }
   
   .experience-description {
     max-width: 100%;
@@ -132,9 +168,9 @@
     border-radius: 50%;
     background-color: var(--logo-dark-orange);
   }
-  
-  .resume-sub-heading {
-    color: var(--black);
+
+  [data-bs-theme=dark] .heading-bullet {
+    background-color: var(--dark-mode-tan-shade);
   }
   
   .resume-heading-description {
@@ -149,6 +185,10 @@
     color: var(--white);
   }
   
+  [data-bs-theme=dark] .heading-date {
+    background-color: var(--dark-mode-tan-shade);
+  }
+
   .skill-parent {
     display: flex;
     flex-direction: column;
@@ -170,6 +210,10 @@
     width: 70%;
     background-color: var(--logo-dark-orange);
   }
+
+  [data-bs-theme=dark] .skill-percentage {
+    background-color: var(--dark-mode-tan-shade);
+  }
   
   .skill-percentage .active-percentage-bar {
     height: 15px;
@@ -177,10 +221,18 @@
     position: absolute;
     background-color: var(--site-nav-dark);
   }
+
+  [data-bs-theme=dark] .skill-percentage .active-percentage-bar {
+    background-color: var(--dark-mode-site-nav-very-dark);
+  }
   
   .skill-parent span {
     font-size: 16px;
     color: var(--logo-dark-orange);
+  }
+
+  [data-bs-theme=dark] .skill-parent span {
+    color: var(--dark-mode-site-nav-very-dark);
   }
   
   /* IPAD PRO RESPONSIVENESS */

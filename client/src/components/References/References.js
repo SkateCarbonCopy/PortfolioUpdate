@@ -64,8 +64,8 @@ export default function References() {
                 />
                 <blockquote>{mapQuoteParagraphs(ref.quoteParagraphs)}</blockquote>
                 <div>
-                    <h4 className='dark-orange fw-bold'>{ref.name}</h4>
-                    <h5>{ref.role}</h5>
+                    <h4 className='ref-name fw-bold'>{ref.name}</h4>
+                    <h5 className='ref-role'>{ref.role}</h5>
                 </div>
             </div>
         </div>

@@ -154,14 +154,14 @@ export default function Gallery() {
             src: 'ClevelandGraff.jpg',
             alt: 'Complex "Cleveland" graffiti'
         }, 
-        {
-            file: 'carboncopylogo',
-            title: 'Carbon Copy Labs Logo',
-            description: 'Logo for Carbon Copy Labs, a handmade skateboard company operated by myself, and friend.',
-            media: 'Illustrator',
-            src: 'carboncopylogo.png',
-            alt: 'Logo with C\'s in various styles arranged to abstractly resemble a skateboard wheel rolling'
-        },
+        // {
+        //     file: 'carboncopylogo',
+        //     title: 'Carbon Copy Labs Logo',
+        //     description: 'Logo for Carbon Copy Labs, a handmade skateboard company operated by myself, and friend.',
+        //     media: 'Illustrator',
+        //     src: 'carboncopylogo.png',
+        //     alt: 'Logo with C\'s in various styles arranged to abstractly resemble a skateboard wheel rolling'
+        // },
         {
             file: 'cclbanners',
             title: 'Carbon Copy Labs Site Banners',
@@ -200,13 +200,15 @@ export default function Gallery() {
                     <Masonry gutter={"1.5rem"}>
                         {images.map((image, i) => {
                             return (
-                                <Slide cascade="true">
+                                <Slide 
+                                    cascade="true"
+                                    key={i}
+                                >
                                     <a 
                                         href={imagesImport[image.src]} 
                                         data-lightbox="gallery"
                                         data-title={image.title + "&nbsp;-&nbsp;<span>" + image.description + "</span>"}
                                         data-alt={image.title}
-                                        key={i}
                                         >
                                         <img
                                             src={imagesImport[image.src]}
