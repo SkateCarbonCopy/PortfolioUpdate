@@ -22,7 +22,10 @@ export default function ToggleTheme() {
 
     return (
         <div>
-            <div className='themeToggleElement toggle-shadow' onClick={() => toggleTheme()}>
+            <div className='themeToggleElement toggle-shadow' onClick={() => {
+                toggleTheme();
+                setToggle(!isToggled);
+            }}>
                 <h1 className='fs-xl mb-0'>
                     <Lightbulb toggled={isToggled} toggle={setToggle} reversed={true} />
                 </h1>
