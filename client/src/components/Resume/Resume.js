@@ -60,14 +60,14 @@ const Resume = (props) => {
   const projectsDetails = [
     {
       title: "Acuo Admin Portal",
-      duration: { dates: "2006-2008" },
+      duration: { dates: "2020-2021" },
       description:
         "A web application which assisted administrators in managing very large amounts of medical images, and their associated data.",
       subHeading: "Technologies Used: AngularJS, C#, PostgreSQL, Elasticsearch, Bootstrap",
     },
     {
       title: "Training.Hyland.com",
-      duration: { dates: "2006-2008" },
+      duration: { dates: "2016-2020" },
       description:
         "An eLearning website which offered video based courses (either free or requiring subscriptions), as well as the opportunities it purchase in-person Instructor-led courses.",
       subHeading:
