@@ -1,4 +1,5 @@
 import React from 'react';
+import Carousel from '../../utilities/Carousel/Carousel';
 import './References.scss';
 
 function importAll(r) {
@@ -15,7 +16,7 @@ const imagesImport = importAll(require.context('../../assets/img/references', fa
 
 export default function References() {
 
-    const referenceDetails = [
+    let referenceDetails = [
         {
             name: "Giovanna Orlando",
             role: "Internal Project Manager at Hyland",
@@ -24,7 +25,7 @@ export default function References() {
         }, 
         {
             name: "Shelby Lounsborough",
-            role: "Team Lead - External Training at Hyland",
+            role: "Manager of Training at Hyland",
             quoteParagraphs: [
                 "Colin is the gold standard when it comes to design, customer focus, and peer leadership.",
                 "Colin was an ambassador and mentor to me as I joined Hyland nearly 8 years ago. He leads by example in everything he does.",
@@ -42,8 +43,36 @@ export default function References() {
                 "He is a great team player and always goes above and beyond to ensure the project is delivered on time and to the highest standard. Colin has a great ability to communicate technical concepts to non-technical stakeholders. He is always willing to take the time to explain things in a clear and concise manner."
             ],
             img: 'Kevin.jpg'
+        }, 
+        {
+            name: "Erin Thompson, M. A.",
+            role: "Senior Instructional Designer",
+            quoteParagraphs: [
+                "Colin is someone you want on your team. He is thoughtful in his approach to his work and provides equally thoughtful input and feedback to other’s projects, always making them better with his insight. Even in stressful moments Colin remains composed and focused on the goal ahead of him. He makes time for his teammates and exudes positive energy. Writing this makes me realize how much I miss working with him, and how lucky others will be to work with him. "
+            ],
+            img: 'Erin.jpg'
         }
     ];
+
+    function shuffle(array) {
+        let currentIndex = array.length,  randomIndex;
+      
+        // While there remain elements to shuffle.
+        while (currentIndex != 0) {
+      
+          // Pick a remaining element.
+          randomIndex = Math.floor(Math.random() * currentIndex);
+          currentIndex--;
+      
+          // And swap it with the current element.
+          [array[currentIndex], array[randomIndex]] = [
+            array[randomIndex], array[currentIndex]];
+        }
+      
+        return array;
+    }
+
+    referenceDetails = shuffle(referenceDetails);
 
     const mapQuoteParagraphs = function (arr) {
         return arr.map((ref, i) => (
@@ -55,7 +84,7 @@ export default function References() {
 
     const getReferences = () => {
     return referenceDetails.map((ref, i) => (
-        <div className="col-lg-4 my-5 my-lg-0 text-center d-flex" key={i}>
+        <div className="my-5 my-lg-0 text-center d-flex px-0 px-md-2 px-xl-3 reference-card" key={i}>
             <div className='profile position-relative d-flex flex-wrap align-content-center justify-content-center'>
                 <img
                     src={imagesImport[ref.img]}
@@ -80,9 +109,9 @@ export default function References() {
                 </div>
             </div>
             <section className='testimonials container pb-5'>
-                    <div className="row my-2 d-flex flex-wrap">
+                    <Carousel show={3}>
                         {getReferences()}
-                    </div>
+                    </Carousel>
             </section>
         </div>
     )
