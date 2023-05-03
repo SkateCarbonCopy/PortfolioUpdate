@@ -31,7 +31,7 @@
   }
 
   a.nav-link:hover {
-    color: var(--dark-mode-site-nav-very-dark) !important;
+    color: var(--very-light-blue) !important;
   }
 }
 
@@ -60,20 +60,4 @@
     #site-nav .navbar-nav {
         width: 65%;
       }
-}
-
-[data-bs-theme=dark] {
-  #site-nav.bg-light {
-    --bs-bg-opacity: 1;
-    background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
-  }
-
-  .text {
-    &-white-75 {
-      color: rgba(0, 0, 0, 0.75) !important;
-    }
-    &-black-75 {
-      color: rgba(255, 255, 255, 0.75) !important;
-    }
-  }
 }

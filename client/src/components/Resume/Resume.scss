@@ -22,7 +22,7 @@
   }
 
   [data-bs-theme=dark] .resume-bullets {
-    box-shadow: 15px 0 9px -15px var(--dark-mode-site-nav-very-dark);
+    box-shadow: 15px 0 9px -15px var(--very-light-blue);
   }
   
   .resume-bullet-details {
@@ -68,7 +68,7 @@
   }
 
   [data-bs-theme=dark] .bullet {
-    background-color: var(--dark-mode-site-nav-very-dark);
+    background-color: var(--very-light-blue);
   }
   
   .bullet-label {
@@ -90,7 +90,7 @@
   }
 
   [data-bs-theme=dark] .bullet-icons {
-    background-color: var(--dark-mode-site-nav-very-dark);
+    background-color: var(--very-light-blue);
   }
 
   .resume-content .bullet i::before {
@@ -107,7 +107,7 @@
   }
   
   [data-bs-theme=dark] .resume-icon {
-    color: var(--dark-mode-site-nav-very-dark);
+    color: var(--very-light-blue);
   }
 
   .selected-bullet {
@@ -223,7 +223,7 @@
   }
 
   [data-bs-theme=dark] .skill-percentage .active-percentage-bar {
-    background-color: var(--dark-mode-site-nav-very-dark);
+    background-color: var(--very-light-blue);
   }
   
   .skill-parent span {
@@ -232,7 +232,7 @@
   }
 
   [data-bs-theme=dark] .skill-parent span {
-    color: var(--dark-mode-site-nav-very-dark);
+    color: var(--very-light-blue);
   }
   
   /* IPAD PRO RESPONSIVENESS */

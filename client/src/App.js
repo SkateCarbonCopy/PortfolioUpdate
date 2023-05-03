@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState } from 'react';
 import './App.scss';
 import '@theme-toggles/react/css/Lightbulb.css';
 
@@ -10,29 +10,29 @@ import References from "./components/References/References";
 import Resume from "./components/Resume/Resume";
 
 function App() {
-  // set theme color
-  useEffect(() => {
-      var theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-      var htmlDoc = document.querySelector("html");
-      htmlDoc.setAttribute("data-bs-theme", theme);
-  })
-  return (
-    <div className="App">
-      <Home />
-      <Fade>
-        <AboutMe />
-      </Fade>
-      <Fade>
-        <Portfolio />
-      </Fade>
-      <Fade>
-        <References />
-      </Fade>
-      <Fade>
-        <Resume />
-      </Fade>
-    </div>
-  );
+    const [appTheme, setAppTheme] = useState('dark');
+
+    const appThemeUpdate = newTheme => {
+      setAppTheme(newTheme);
+    }
+
+    return (
+        <div className="App">
+            <Home onAppThemeUpdate={appThemeUpdate} />
+            <Fade>
+                <AboutMe theme={appTheme} />
+            </Fade>
+            <Fade>
+                <Portfolio />
+            </Fade>
+            <Fade>
+                <References />
+            </Fade>
+            <Fade>
+                <Resume />
+            </Fade>
+        </div>
+    );
 }
 
 export default App;

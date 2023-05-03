@@ -69,7 +69,7 @@ export default function Landing() {
     return (
         <div id='landingWrapper'>
             <div id="content" className="container-xl" style={{opacity: 1}}>
-                <section className='light nopad-t nopad-b'>
+                <section>
                     <div className="row">
                         <div className="col-12 duality-wrapper">
                             <div id="duality" className="duality">

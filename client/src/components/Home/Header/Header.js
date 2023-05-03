@@ -4,7 +4,7 @@ import Scrollspy from 'react-scrollspy'
 import './Header.scss';
 import logo from '../../../assets/img/logo.png';
 
-export default function Header() {
+export default function Header(props) {    
 
     const scrollToTop = function () {
         animateScroll.scrollToTop();
@@ -12,7 +12,7 @@ export default function Header() {
 
     return (
         <Scrollspy className='d-flex w-100' items={["AboutMe", "Portfolio", "References", "Resume"]}>
-            <nav className="navbar navbar-light bg-light navbar-expand-lg fixed-top" id='site-nav'>
+            <nav className={`navbar ${props.siteTheme === 'dark' ? "navbar-dark bg-dark" : "navbar-light bg-light"} navbar-expand-lg fixed-top`} id='site-nav'>
                 <div className="container-fluid justify-content-end">
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon text-light"></span>
@@ -22,7 +22,7 @@ export default function Header() {
                             {/* About Me */}
                             <div className='d-flex grow-nav-link order-2 order-lg-1'>
                                 <Link
-                                    className="nav-link site-nav-link-lg mx-lg-4 fw-bold text-black-75"
+                                    className={`nav-link site-nav-link-lg mx-lg-4 fw-bold ${props.siteTheme === 'dark' ? "text-white-75" : "text-black-75"}`}
                                     to="AboutMe"
                                     spy={true}
                                     smooth={true}
@@ -33,7 +33,7 @@ export default function Header() {
                             {/* Portfolio */}
                             <div className='d-flex grow-nav-link order-3 order-lg-2'>
                                 <Link
-                                    className="nav-link site-nav-link-lg mx-lg-4 fw-bold text-black-75"
+                                    className={`nav-link site-nav-link-lg mx-lg-4 fw-bold ${props.siteTheme === 'dark' ? "text-white-75" : "text-black-75"}`}
                                     to="Portfolio"
                                     spy={true}
                                     smooth={true}
@@ -57,7 +57,7 @@ export default function Header() {
                             {/* References */}
                             <div className='d-flex grow-nav-link order-4'>
                                 <Link
-                                    className="nav-link site-nav-link-lg mx-lg-4 fw-bold text-black-75"
+                                    className={`nav-link site-nav-link-lg mx-lg-4 fw-bold ${props.siteTheme === 'dark' ? "text-white-75" : "text-black-75"}`}
                                     to="References"
                                     spy={true}
                                     smooth={true}
@@ -68,7 +68,7 @@ export default function Header() {
                             {/* Resume */}
                             <div className='d-flex grow-nav-link order-5'>
                                 <Link
-                                    className="nav-link site-nav-link-lg mx-lg-4 fw-bold text-black-75"
+                                    className={`nav-link site-nav-link-lg mx-lg-4 fw-bold ${props.siteTheme === 'dark' ? "text-white-75" : "text-black-75"}`}
                                     to="Resume"
                                     spy={true}
                                     smooth={true}

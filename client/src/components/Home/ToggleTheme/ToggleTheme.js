@@ -1,35 +1,24 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './ToggleTheme.scss';
 import { Lightbulb } from "@theme-toggles/react";
 
-export default function ToggleTheme() {
-    const [isToggled, setToggle] = useState(false);
+export default function ToggleTheme(props) {
 
-    const toggleTheme = function () {        
-        let themeColor = document.querySelector("html").getAttribute("data-bs-theme");
-        const htmlDoc = document.querySelector("html");
-        const currentThemeSetting = htmlDoc.getAttribute("data-bs-theme");
-        if (currentThemeSetting === "dark") {
-            themeColor = "light";
-            console.log(`Updated theme to ${themeColor}`);
-            htmlDoc.setAttribute("data-bs-theme", "light");
+    const toggleTheme = () => {               
+        if (document.querySelector("html").getAttribute("data-bs-theme") === "dark") {  
+            document.querySelector("html").setAttribute("data-bs-theme", "light");
+            props.onThemeToggle("light");
         } else {
-            themeColor = "dark";
-            console.log(`Updated theme to ${themeColor}`);
-            htmlDoc.setAttribute("data-bs-theme", "dark");
+            document.querySelector("html").setAttribute("data-bs-theme", "dark");
+            props.onThemeToggle("dark");
         }
     }
 
     return (
-        <div>
-            <div className='themeToggleElement toggle-shadow' onClick={() => {
-                toggleTheme();
-                setToggle(!isToggled);
-            }}>
-                <h1 className='fs-xl mb-0'>
-                    <Lightbulb toggled={isToggled} toggle={setToggle} reversed={true} />
-                </h1>
-            </div>
+        <div className='themeToggleElement toggle-shadow' onClick={toggleTheme}>
+            <h1 className='fs-xl mb-0'>
+                <Lightbulb />
+            </h1>
         </div>
     )
 }
