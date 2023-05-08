@@ -4,8 +4,6 @@ import Scrollspy from 'react-scrollspy'
 import './Header.scss';
 import logo from '../../../assets/img/logo.png';
 
-import '../../../../node_modules/bootstrap/dist/js/bootstrap';
-
 export default function Header(props) {    
 
     const scrollToTop = () => {
