@@ -51,6 +51,15 @@ export default function References() {
                 "Colin is someone you want on your team. He is thoughtful in his approach to his work and provides equally thoughtful input and feedback to other’s projects, always making them better with his insight. Even in stressful moments Colin remains composed and focused on the goal ahead of him. He makes time for his teammates and exudes positive energy. Writing this makes me realize how much I miss working with him, and how lucky others will be to work with him. "
             ],
             img: 'Erin.jpg'
+        }, 
+        {
+            name: "Matthew Gray", 
+            role: "Full Stack Developer",
+            quoteParagraphs: [
+                "I highly recommend Colin for his exceptional creativity and his ability to learn anything and everything. During his time at Hyland, Colin consistently exceeded expectations and delivered high quality work that demonstrated his impressive talent and eye for design. His creative approach to problem solving and design have been instrumental in the success of many new features and reports in our project.",
+                "Colin is also a team player and a pleasure to work with. He made a big impact to our team immediately after joining. His positive attitude and willingness to go the extra mile to support his colleagues have made him indispensable."
+            ], 
+            img: 'Matt.jpg'
         }
     ];
 
@@ -76,7 +85,7 @@ export default function References() {
 
     const mapQuoteParagraphs = function (arr) {
         return arr.map((ref, i) => (
-            <span className={`mb-3 ${i < arr.length-1 && i !== 0 ? "d-block" : ""} ${i === 1 ? "mt-3" : ""}`} key={i}>
+            <span className={`mb-3 ${i < arr.length-1 && i !== 0 ? "d-block" : ""} ${i === 1 ? "mt-3 d-block" : ""}`} key={i}>
                 {ref}
             </span> 
         ))

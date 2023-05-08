@@ -4,10 +4,18 @@ import Scrollspy from 'react-scrollspy'
 import './Header.scss';
 import logo from '../../../assets/img/logo.png';
 
+import '../../../../node_modules/bootstrap/dist/js/bootstrap';
+
 export default function Header(props) {    
 
-    const scrollToTop = function () {
+    const scrollToTop = () => {
         animateScroll.scrollToTop();
+    }
+
+    const collapseNavIfOpen = () => {
+        if (document.getElementById('siteNavBar').classList.contains('show')) {
+            document.getElementById('siteNavBar').classList.remove('show');
+        }
     }
 
     return (
@@ -28,6 +36,7 @@ export default function Header(props) {
                                     smooth={true}
                                     offset={-60}
                                     duration={500}
+                                    onClick={collapseNavIfOpen}
                                     >About Me</Link>
                             </div>
                             {/* Portfolio */}
@@ -39,6 +48,7 @@ export default function Header(props) {
                                     smooth={true}
                                     offset={-60}
                                     duration={500}
+                                    onClick={collapseNavIfOpen}
                                     >Portfolio</Link>
                             </div>
                             {/* Home */}
@@ -49,7 +59,10 @@ export default function Header(props) {
                                     spy={true}
                                     smooth={true}
                                     duration={500}
-                                    onClick={scrollToTop}
+                                    onClick={() => {
+                                        scrollToTop();
+                                        collapseNavIfOpen();
+                                    }}
                                     >
                                         <img src={logo} style={{width: "30px", height: "30px"}} alt="Colin Gastelle Logo" />
                                     </Link>
@@ -63,6 +76,7 @@ export default function Header(props) {
                                     smooth={true}
                                     offset={-60}
                                     duration={500}
+                                    onClick={collapseNavIfOpen}
                                     >References</Link>
                             </div>
                             {/* Resume */}
@@ -74,6 +88,7 @@ export default function Header(props) {
                                     smooth={true}
                                     offset={-60}
                                     duration={500}
+                                    onClick={collapseNavIfOpen}
                                     >Resume</Link>
                             </div>
                         </div>
