@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.scss';
 import '@theme-toggles/react/css/Lightbulb.css';
 
@@ -10,15 +10,22 @@ import References from "./components/References/References";
 import Resume from "./components/Resume/Resume";
 
 function App() {
-    const [appTheme, setAppTheme] = useState('dark');
+    const [appTheme, setAppTheme] = useState('');
 
-    const appThemeUpdate = newTheme => {
+    // set the user's preferred theme
+    useEffect(() => {
+        const prefferedTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.querySelector("html").setAttribute("data-bs-theme", prefferedTheme);
+        setAppTheme(prefferedTheme);
+    }, []);
+
+    const handleAppThemeUpdate = newTheme => {
       setAppTheme(newTheme);
     }
 
     return (
         <div className="App">
-            <Home onAppThemeUpdate={appThemeUpdate} />
+            <Home onAppThemeUpdate={handleAppThemeUpdate} theme={appTheme} />
             <Fade>
                 <AboutMe theme={appTheme} />
             </Fade>

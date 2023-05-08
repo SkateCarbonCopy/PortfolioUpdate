@@ -14,10 +14,10 @@ export default function Header(props) {
         <Scrollspy className='d-flex w-100' items={["AboutMe", "Portfolio", "References", "Resume"]}>
             <nav className={`navbar ${props.siteTheme === 'dark' ? "navbar-dark bg-dark" : "navbar-light bg-light"} navbar-expand-lg fixed-top`} id='site-nav'>
                 <div className="container-fluid justify-content-end">
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNavBar" aria-controls="siteNavBar" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon text-light"></span>
                     </button>
-                    <div className="collapse navbar-collapse justify-content-end justify-content-lg-center" id="navbarNavAltMarkup">
+                    <div className="collapse navbar-collapse justify-content-end justify-content-lg-center" id="siteNavBar">
                         <div className="navbar-nav align-items-end align-items-lg-center">
                             {/* About Me */}
                             <div className='d-flex grow-nav-link order-2 order-lg-1'>

@@ -51,16 +51,22 @@
     text-align: -webkit-center;
 }
 
-.duality-description {
-    position: relative;
-    z-index: 10;
-}
+a {
+    & .duality-description {
+        color: var(--site-nav-dark);
+        position: relative;
+        z-index: 10;
+    
+        &:hover {
+            color: var(--site-nav-very-dark);
+        }
+    }
 
-a .duality-description {
-    color: var(--site-nav-dark);
-
-    &:hover {
-        color: var(--site-nav-very-dark);
+    & .designer,
+    & .developer {
+        &:hover {
+            cursor: pointer;
+        }
     }
 }
 
