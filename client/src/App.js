@@ -14,9 +14,9 @@ function App() {
 
     // set the user's preferred theme
     useEffect(() => {
-        const prefferedTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-        document.querySelector("html").setAttribute("data-bs-theme", prefferedTheme);
-        setAppTheme(prefferedTheme);
+        const preferredTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.querySelector("html").setAttribute("data-bs-theme", preferredTheme);
+        setAppTheme(preferredTheme);
     }, []);
 
     const handleAppThemeUpdate = newTheme => {
