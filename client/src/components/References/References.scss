@@ -47,33 +47,43 @@
     border-radius: 50%;
 }
 
-blockquote {
-    &::before {
-        content: '\f10d';
-        font-family: 'Font Awesome 6 Free';
-        font-weight: 700;
-        font-size: 30px;
-        position: relative;
-        color: var(--site-nav-dark);
-        line-height: 20px;
-        top: 0;
-        right: 5px;
+blockquote h6 {
+    &:first-child {
+        &:before {
+            content: '\f10d';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 700;
+            font-size: 30px;
+            position: relative;
+            color: var(--site-nav-dark);
+            line-height: 20px;
+            top: 0;
+            right: 5px;
+        }
     }
-    &::after {
-        content: '\f10e';
-        font-family: 'Font Awesome 6 Free';
-        font-weight: 700;
-        font-size: 25px;
-        position: relative;
-        color: var(--site-nav-dark);
-        line-height: 20px;
-        bottom: 0;
-        left: 5px;
+    &:last-child {
+        &:after {
+            content: '\f10e';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 700;
+            font-size: 25px;
+            position: relative;
+            color: var(--site-nav-dark);
+            line-height: 20px;
+            bottom: 0;
+            left: 5px;
+        }
     }
 }
 
-[data-bs-theme=dark] #References blockquote span {
+[data-bs-theme=dark] #References blockquote h6,
+[data-bs-theme=dark] #References blockquote h6 {
     color: rgb(var(--bs-dark-rgb));
+    
+    &:first-child::before,
+    &:last-child::after {
+        color: rgba(0, 0, 0, .4)
+    }
 }
 
 [data-bs-theme=dark] blockquote {

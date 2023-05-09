@@ -60,6 +60,16 @@ export default function References() {
                 "Colin is also a team player and a pleasure to work with. He made a big impact to our team immediately after joining. His positive attitude and willingness to go the extra mile to support his colleagues have made him indispensable."
             ], 
             img: 'Matt.jpg'
+        },
+        {
+            name: "Brian Horsch", 
+            role: "Director R&D - Healthcare Enterprise Medical Imaging at Hyland",
+            quoteParagraphs: [
+                "Colin started with Hyland as an eLearning intern and advanced into the role of eLearning specialist.",
+                "Starting in 2016, Colin worked as a Web Delivery Specialist on the Education Services team for several years. He created and updated web pages for the training website, managed training content, and designed and hosted events for clients during tech conferences.",
+                "In 2020, Colin transferred into the Enterprise Imaging group as a software developer on the Acuo Admin Portal (AAP) team. Colin took on a complete redesign of AAP and its new dashboard homepage, worked on a new UI for reports in AAP 2.0, and has advanced the reporting, analytics and administration modules to new levels. Colin has shown tremendous growth and passion in all his work and has been an outstanding team member."
+            ], 
+            img: undefined
         }
     ];
 
@@ -85,9 +95,12 @@ export default function References() {
 
     const mapQuoteParagraphs = function (arr) {
         return arr.map((ref, i) => (
-            <span className={`mb-3 ${i < arr.length-1 && i !== 0 ? "d-block" : ""} ${i === 1 ? "mt-3 d-block" : ""}`} key={i}>
+            // <span className={`mb-3 ${i < arr.length-1 && i !== 0 ? "d-block" : ""} ${i === 1 ? "mt-3 d-block" : ""}`} key={i}>
+            //     {ref}
+            // </span> 
+            <h6 key={i}>
                 {ref}
-            </span> 
+            </h6> 
         ))
     }
 
@@ -95,11 +108,11 @@ export default function References() {
     return referenceDetails.map((ref, i) => (
         <div className="my-5 my-lg-0 text-center d-flex px-0 px-md-2 px-xl-3 reference-card" key={i}>
             <div className='profile position-relative d-flex flex-wrap align-content-center justify-content-center'>
-                <img
-                    src={imagesImport[ref.img]}
-                    alt={ref.name}
-                    className='user'
-                />
+                {ref.img && 
+                    <img
+                        src={imagesImport[ref.img]}
+                        alt={ref.name}
+                        className='user'/>}
                 <blockquote>{mapQuoteParagraphs(ref.quoteParagraphs)}</blockquote>
                 <div>
                     <h4 className='ref-name fw-bold'>{ref.name}</h4>
