@@ -95,9 +95,6 @@ export default function References() {
 
     const mapQuoteParagraphs = function (arr) {
         return arr.map((ref, i) => (
-            // <span className={`mb-3 ${i < arr.length-1 && i !== 0 ? "d-block" : ""} ${i === 1 ? "mt-3 d-block" : ""}`} key={i}>
-            //     {ref}
-            // </span> 
             <h6 key={i}>
                 {ref}
             </h6> 
