@@ -17,7 +17,7 @@ export default function ToggleTheme(props) {
     return (
         <div className='themeToggleElement toggle-shadow' onClick={toggleTheme}>
             <h1 className='fs-xl mb-0'>
-                <Lightbulb />
+                <Lightbulb className='lightbulb-color' />
             </h1>
         </div>
     )
