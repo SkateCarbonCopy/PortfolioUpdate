@@ -48,9 +48,10 @@
   }
   .themeToggleElement {
       background-color: rgba(var(--logo-dark-orange-rgb), 0);
-      right: 0rem;
-      bottom: .5rem;
-      height: 3em;
+      //border: none;
+      right: 1rem;
+      bottom: 1rem;
+      height: 4em;
       width: 3em;
   }
   .toggle-shadow {
