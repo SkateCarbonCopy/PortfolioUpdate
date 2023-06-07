@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './ToggleTheme.scss';
 import { Lightbulb } from "@theme-toggles/react";
 
 export default function ToggleTheme(props) {
+    const [isToggled, setToggle] = useState(false)
 
     const toggleTheme = () => {               
         if (document.querySelector("html").getAttribute("data-bs-theme") === "dark") {  
@@ -15,9 +16,12 @@ export default function ToggleTheme(props) {
     }
 
     return (
-        <div className='themeToggleElement toggle-shadow' onClick={toggleTheme}>
+        <div className='themeToggleElement toggle-shadow' onClick={() => {
+            toggleTheme();
+            setToggle(!isToggled);
+        }}>
             <h1 className='fs-xl mb-0'>
-                <Lightbulb className='lightbulb-color' />
+                <Lightbulb toggled={isToggled} className='lightbulb-color' />
             </h1>
         </div>
     )

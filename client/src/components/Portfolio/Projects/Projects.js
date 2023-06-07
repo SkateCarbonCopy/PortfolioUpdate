@@ -111,6 +111,36 @@ export default function Projects() {
                         <h5>I reinvented the process of adding new features to Acuo Admin Portal by introducing a more design focused strategy that included wireframes created via Balsamiq, a mockup phase, and implementation phase. Each of these were documented in Jira and allowed stakeholders more opportunities for comment and a closer association with the design process. </h5>
                     </div>
                 </div>
+                {/* Twitter Clone */}
+                <div className="row">
+                    <div className="col-lg-5 align-self-center mb-5 px-4 order-2 order-lg-1">
+                        <div className="d-flex justify-content-between">
+                            <h1 className="d-inline">Twitter Clone Tutorial</h1>
+                            <a href="https://github.com/SkateCarbonCopy/twitter-clone" target='_blank' rel="noreferrer">
+                                <h1>
+                                    <i className="fa-brands fa-github"></i>
+                                </h1>
+                            </a>
+                        </div>
+                        <h5>In an effort to stay current with new and emerging web technologies, I like to take courses, read newsletters, and follow tutorials from various sources on the web.</h5>
+                        <h5>The latest example of this effort has been completing a Twitter Clone project using the T3 stack (Next.js, React, Tailwind, Prisma, and TypeScript). This tutorial is presented by <a href='https://www.youtube.com/watch?v=jqVm5_G1ZEE' target='_blank' rel="noreferrer">Web Dev Simplified</a> on YouTube and introduces users to T3 stack syntax and fantastic tools such as <a href='https://planetscale.com/' target='_blank' rel="noreferrer">PlanetScale</a> (for database hosting/management) and <a href='https://vercel.com/' target='_blank' rel="noreferrer">Vercel</a> (to host and ship the website).</h5>
+                        <h5>This project allows any user with an active Discord account to login, follow other users, make posts, and like posts.</h5>
+                    </div>
+                    <div className="col-lg-7 position-relative mb-5 order-1 order-lg-2">
+                        <a
+                            href={imagesImport["TwitterCloneTutorial.png"]}
+                            data-lightbox="Twitter"
+                            data-title={"Twitter Clone Homepage"}
+                            data-alt={"Twitter Clone Homepage"}
+                            >
+                            <img
+                                src={imagesImport["TwitterCloneTutorial.png"]}
+                                className='img-thumbnail h-lg-100'
+                                alt={"Twitter Clone Homepage"}
+                            />
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     )
