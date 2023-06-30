@@ -63,7 +63,7 @@ export default function Projects() {
                         <h5>Throughout my time working on Acuo Admin Portal, I was responsible for a number of high visibility/high impact updates. One of which was updating the entire product’s CSS library from Bootstrap 3 to 4, and eventually 5. </h5>
                         <h5>This update has enabled the team to more easily utilize modern features added to the library such as flexbox. Since the product has over 20 modules, this change required a very large amount of browser compatibility checking and attention to mobile responsiveness. I used Browserstack to ensure different the content would appear correctly on different devices and screen resolutions.</h5>
                     </div>
-                    <div className="col-lg-7 position-relative mb-5 order-1 order-lg-2">
+                    <div className="col-lg-7 align-self-center position-relative mb-5 order-1 order-lg-2">
                         <a
                             href={imagesImport["bootstrapExample.png"]}
                             data-lightbox="Bootstrap"
@@ -72,7 +72,7 @@ export default function Projects() {
                             >
                             <img
                                 src={imagesImport["bootstrapExample.png"]}
-                                className='img-thumbnail h-lg-100'
+                                className='img-thumbnail'
                                 alt={"Bootstrap 5 Page Example"}
                             />
                         </a>
@@ -126,7 +126,7 @@ export default function Projects() {
                         <h5>The latest example of this effort has been completing a Twitter Clone project using the T3 stack (Next.js, React, Tailwind, Prisma, and TypeScript). This tutorial is presented by <a href='https://www.youtube.com/watch?v=jqVm5_G1ZEE' target='_blank' rel="noreferrer">Web Dev Simplified</a> on YouTube and introduces users to T3 stack syntax and fantastic tools such as <a href='https://planetscale.com/' target='_blank' rel="noreferrer">PlanetScale</a> (for database hosting/management) and <a href='https://vercel.com/' target='_blank' rel="noreferrer">Vercel</a> (to host and ship the website).</h5>
                         <h5>This project allows any user with an active Discord account to login, follow other users, make posts, and like posts.</h5>
                     </div>
-                    <div className="col-lg-7 position-relative mb-5 order-1 order-lg-2">
+                    <div className="col-lg-7 align-self-center position-relative mb-5 order-1 order-lg-2">
                         <a
                             href={imagesImport["TwitterCloneTutorial.png"]}
                             data-lightbox="Twitter"
@@ -135,7 +135,7 @@ export default function Projects() {
                             >
                             <img
                                 src={imagesImport["TwitterCloneTutorial.png"]}
-                                className='img-thumbnail h-lg-100'
+                                className='img-thumbnail'
                                 alt={"Twitter Clone Homepage"}
                             />
                         </a>
